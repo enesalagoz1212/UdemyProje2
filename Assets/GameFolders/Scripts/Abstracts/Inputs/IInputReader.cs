@@ -7,6 +7,7 @@ namespace UdemyProject2.Abstracts.Inputs
 	interface IInputReader
 	{
 		float Horizontal { get; }
+		bool IsJump { get; }
 	}
 
 }

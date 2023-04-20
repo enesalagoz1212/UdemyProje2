@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UdemyProject2.Controllers;
+using UdemyProject2.Abstracts.Movements;
 
 namespace UdemyProject2.Movements
 {
-    public class JumpWithRigidbody 
+    public class JumpWithRigidbody :IJump
     {
         Rigidbody _rigidbody;
+        public bool CanJump => _rigidbody.velocity.y != 0;
 
 		public JumpWithRigidbody(PlayerController playerController)
 		{
@@ -15,9 +17,9 @@ namespace UdemyProject2.Movements
             
         }
 
-        public void TickFixed(float jumpForce)
+        public void FixedTick(float jumpForce)
 		{
-            if (_rigidbody.velocity.y != 0) return;
+            if (CanJump) return;
 
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.AddForce(Vector3.up * Time.deltaTime * jumpForce);
