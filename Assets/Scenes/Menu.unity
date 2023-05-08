@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.2996273, g: 0.25062415, b: 0.20409787, a: 1}
+  m_IndirectSpecularColor: {r: 0.29884878, g: 0.24989736, b: 0.20381638, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -128,7 +128,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 2678655888117969664, guid: 2e303f6c09d49e54d9227143bb1dcef0, type: 3}
   m_PrefabInstance: {fileID: 2678655888487252378}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &761628803
+--- !u!1001 &799698465
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -138,6 +138,10 @@ PrefabInstance:
     - target: {fileID: 1967375991700453275, guid: 7f2e188354c680f4a8e79452d1847197, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045733917563088636, guid: 7f2e188354c680f4a8e79452d1847197, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4782332099511624455, guid: 7f2e188354c680f4a8e79452d1847197, type: 3}
       propertyPath: m_Pivot.x

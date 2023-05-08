@@ -5,6 +5,7 @@ using UdemyProject2.Movements;
 using System;
 using UdemyProject2.Abstracts.Controllers;
 using UdemyProject2.Managers;
+using UdemyProject2.Enums;
 
 namespace UdemyProject2.Controllers
 {
@@ -12,9 +13,11 @@ namespace UdemyProject2.Controllers
     {
 		
 		[SerializeField] float _maxLifeTime = 10f;
-
-        VerticalMover _mover;
+		[SerializeField] EnemyEnum _enemyEnum;
+		VerticalMover _mover;
 		float _currentLifeTime = 0f;
+
+		public EnemyEnum EnemyType => _enemyEnum;
 
 
 		private void Awake()
@@ -41,6 +44,14 @@ namespace UdemyProject2.Controllers
 		private void KillYourself()
 		{
 			EnemyManager.Instance.SetPool(this);
+		}
+		public void SetMoveSpeed(float moveSpeed)
+		{
+			if (moveSpeed<_moveSpeed)
+			{
+				return;
+			}
+			_moveSpeed = moveSpeed;
 		}
 	}
 }
